@@ -31,5 +31,7 @@ or run the exact file
 npx cypress run --spec cypress\specs\blank-factor.js --browser chrome
 ```
 
+Note: If it is your first npm execution, you will probably need to run "npx cypress open" it twice
+
 ## Author
 [Andy Arias](https://andyarias.net/)

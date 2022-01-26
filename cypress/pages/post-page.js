@@ -12,6 +12,11 @@ class PostPage {
         newsletterErrorMessage:() => cy.get('.error-message')
     };
 
+    /**
+         * This methos will perform a submit into newsletter form. 
+         * I wont wait for validation. It ony enter a data and finish. 
+         * @param {string} email is the string valur to enter into he form. 
+    */ 
     submitNewsletterForm(email) {        
         this.elements.newsletterForm().type(email)
         this.elements.newsletterSubmit().click()
