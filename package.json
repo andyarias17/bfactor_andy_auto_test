@@ -1,0 +1,11 @@
+{
+  "name": "bfactor_andy_auto_test",
+  "version": "1.0.0",
+  "description": "a simple test for blank factor ",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "author": "andyarias@gmail.com",
+  "license": "ISC"
+}

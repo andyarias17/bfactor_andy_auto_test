@@ -1,0 +1,10 @@
+{
+    "integrationFolder": "cypress/specs",
+    "chromeWebSecurity": false,
+    "defaultCommandTimeout": 90000,
+    "pageLoadTimeout": 240000,
+    "responseTimeout": 120000,
+    "requestTimeout": 120000,
+    "viewportWidth": 1400,
+    "viewportHeight": 1060
+}
