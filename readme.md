@@ -9,7 +9,7 @@ In order to use **npm**, you need to install [Node.js 12 or 14 and above](https:
 
 Clone the repo and navigate into it
 ```bash
-git clone https:.git
+git clone https://github.com/andyarias17/bfactor_andy_auto_test.git
 cd bfactor_andy_auto_test
 ```
 
