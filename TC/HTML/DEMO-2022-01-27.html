@@ -1,0 +1,2774 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        html {
+            font-size: 16px;
+            font-family: "Open Sans", Helvetica, sans-serif;
+        }
+        body {
+            padding: 50px;
+            max-width: 700px;
+            width: 700px;
+        }
+        .page {
+            overflow: hidden;
+            page-break-after: always;
+            margin-bottom: 250px;
+        }
+        h1 {
+            margin-top: 0.25rem;
+            font-size: 1.5rem;
+        }
+        .row {
+            width: 100%;
+        }
+        .col-3 {
+            width: 25%;
+            float:left;
+        }
+        .col-4 {
+            width: 33.33%;
+            float:left;
+        }
+        .col-12 {
+            width: 100%;
+            float: left;
+        }
+        .param {
+            font-size: 0.875rem;
+            font-weight: normal;
+        }
+
+        .color-blocker, .color-critical, .color-major, .color-high {
+            color: #D0021B;
+        }
+
+        .conditions-header {
+            font-size: 0.875rem;
+            font-weight: bold;
+            padding-bottom: 0.25rem;
+        }
+
+        .conditions-data {
+            font-weight: normal;
+            font-size: 0.875rem;
+        }
+
+        .clearfix::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+        .data-row {
+            margin-top: 1rem;
+        }
+
+        .table-steps {
+            width: 100%;
+        }
+        .table-steps td {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #dedede;
+        }
+        .table-steps th {
+            font-size: 0.875rem; text-align: left;
+        }
+        .table-steps p {
+            margin-bottom: 0;
+        }
+        .steps ol, .steps ul {
+            margin-bottom: 0;
+            padding-left: 1.125rem;
+        }
+        .steps li {
+            font-size: 0.875rem;
+        }
+
+        .step-position span {
+            padding: .25rem 0.75rem;
+            display: block;
+            margin-right: .75rem;
+            border-radius: .25rem;
+            color: #636363;
+            background: #f3f3f3;
+        }
+
+        .step-action p {
+            display: none;
+        }
+
+        .step-content p.data {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .description {
+            font-size: 0.875rem !important;
+            margin-top: 0 !important;
+        }
+        .description p{
+            font-size: 0.875rem !important;
+            margin-top: 0 !important;
+        }
+
+        .table-steps img,
+        .description img,
+        .markdown img {
+            max-width: 100%;
+        }
+
+        .attachments {vertical-align: top;}
+        .attachments .attachment{width:96px;display:inline-block; margin-right: 8px; vertical-align: top}
+        .attachments .attachment-image{width:96px;height:96px;border-radius:6px;background-size:cover !important;}
+        .attachments .attachment-file{width:96px;height:96px;background:#e9e9e9;border-radius:6px;}
+        .attachments .attachment-file .attachment-extension{display:inline-block; text-decoration:none !important;font-weight:500;color:#000; padding-left: 8px; padding-top: 8px; font-size: 0.75rem;}
+        .attachments .attachment .attachment-filename{width:96px;display:block; text-overflow:ellipsis;white-space:nowrap;margin-top:0.5rem;overflow:hidden;text-decoration:none;color:#656565;font-size:0.625rem;}
+        .attachments .attachment a {text-decoration:none !important;border-bottom: 0;}
+    </style>
+    <link rel="stylesheet" href="https://app.qase.io/css/fontawesome.min.css?1643193711">
+</head>
+<body>
+                                                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-11
+                            / Blank Factor / UI
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify that the login page form is displayed by default when access to Login page</h1>
+        <div class="description"><p>The login form should be displayed when the user access the login page and the user is not logged in yet</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is not logged in.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open a new and clean browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>New session created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to www.<a href="https://testpage.com/login" target="_blank">https://testpage.com/login</a></p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login form displayed</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-13
+                            / Blank Factor / UI
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify the login form contains a username field with text type</h1>
+        <div class="description"><p>html username filed should be type: text</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is not logged in.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open a new and clean browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>New session created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to <a href="https://testpage.com/login" target="_blank">https://testpage.com/login</a></p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login form displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Inspect the <strong>username</strong> field html and validate the element type</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Element type should be <strong>text</strong></p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-14
+                            / Blank Factor / UI
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify the login form contains a password field with type: password</h1>
+        <div class="description"><p>html password field should be type: password</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is not logged in.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open a new and clean browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>New session created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to <a href="https://testpage.com/login" target="_blank">https://testpage.com/login</a></p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login form displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Inspect the <strong>password</strong> field html and validate the element type</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Element type should be <strong>password</strong></p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-15
+                            / Blank Factor / UI
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify the username field value is visible when the user type into it</h1>
+        <div class="description"><p>Value in username field should be visible to the user when user is tying</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is not logged in.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open a new and clean browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>New session created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to <a href="https://testpage.com/login" target="_blank">https://testpage.com/login</a></p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login form displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Type any value in username field</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Value should be visible</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-16
+                            / Blank Factor / UI
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify the password field value is hidden when the user type into it</h1>
+        <div class="description"><p>Value in password field should be hidden to the user when user is tying</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is not logged in.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open a new and clean browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>New session created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to <a href="https://testpage.com/login" target="_blank">https://testpage.com/login</a></p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login form displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Type any value in password field</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Value should be hidden</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                                        <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-17
+                            / Blank Factor / Functionality
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify a valid login</h1>
+        <div class="description"><p>Do a valid login into the login page and validate that <strong>functionality selection page</strong> is displayed</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is not logged in.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open a new browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>a browser session is created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to www.testpage.com/login</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Login page is created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter a valid username</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>username01</p></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">4</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter a valid password</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>password01</p></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">5</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on Login Button</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>A welcome message is displayed in the <strong>functionality selection page</strong> is displayed</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-18
+                            / Blank Factor / Functionality
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify a failed login with empty username</h1>
+        <div class="description"><p>Validate the login form show a error message when user enter invalid credentials with empty username</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Negative</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is not logged in.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open a new browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>a browser session is created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to www.testpage.com/login</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Login page is created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter an empty username</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>&quot; &quot;</p></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">4</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter a valid password</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>password01</p></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">5</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on Login Button</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>An error message should be displayed and The user is again asked to provide user name and password</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-19
+                            / Blank Factor / Functionality
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify a failed login with incorrect credentials</h1>
+        <div class="description"><p>Validate the login form show a error message when user enter invalid credentials which are not registered in database</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Negative</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is not logged in.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open a new browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>a browser session is created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to www.testpage.com/login</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Login page is created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter an invalid username</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>invaliduser</p></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">4</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter a valid password</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>invalidpassword</p></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">5</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on Login Button</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>An error message should be displayed and The user is againasked to provide user name and password</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-20
+                            / Blank Factor / Functionality
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Validate Logout button is displayed in all page after a success login</h1>
+        <div class="description"><p>We need to validate that all <strong>functionality selection page</strong> has the logout button</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is logged in.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Navigate through <strong>functionality selection pages</strong></p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Logout button should be displayed</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-21
+                            / Blank Factor / Functionality
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Validate Logout functionality</h1>
+        <div class="description"><p>We need to validate that logout link destroy the session</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is logged in.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Navigate through <strong>functionality selection pages</strong></p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Logout button should be displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on logout link or button</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Session is destroyed and login-state changed, logged out confirmation message is shown and the user is redirected to the login page</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-22
+                            / Blank Factor / Functionality
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Validate remember me functionality</h1>
+        <div class="description"><p>We need to validate that browser save a cookie with the username and password and fill automatically the form the next time</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-medium"></i> Medium</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Functional</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>The user is logged out.</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Create a new a clean browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>a browser session is created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to www.testpage.com/login</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login page is displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter a valid username</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>validUser</p></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Logout button should be displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">4</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter a valid password</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>validPassword</p></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">5</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Check the &quot;Remember me&quot; checkbox</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Remember me checkbox is selected</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">6</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on Login button</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p><strong>functionality selection page</strong> should be displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">7</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on logout link</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>session should be destroyed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">8</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Close the browser</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Browser is closed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">9</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open the browser again</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>browser is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">10</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to www.testpage.com/login</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login page is displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">11</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Validate the username and password fields are auto filled with your previous data</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                                        <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-23
+                            / Blank Factor / Performance
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Validate that valid Login Response time is less than 1.0s</h1>
+        <div class="description"><p>We need to validate the response time of a valid login request</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>User is logged out</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open the browser</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Browser is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to www.testpage.com</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login page is displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter the valid user name</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">4</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter the valid password</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">5</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Press f12 to open developer mode in the browser</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>developer mode is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">6</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on Networks tab</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Network tab is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">7</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Clear all existing logs</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">8</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Now Click on submit button</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Login request is sent</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">9</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Validate the login request and wait for the response time</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Response time should be less than 1,0 s</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-24
+                            / Blank Factor / Performance
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Validate that invalid Login Response time is less than 1.0s</h1>
+        <div class="description"><p>We need to validate the response time of an invalid login request</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>User is logged out</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open the browser</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Browser is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to www.testpage.com</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login page is displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter the invalid username</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">4</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter the invalid password</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">5</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Press f12 to open developer mode in the browser</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>developer mode is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">6</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on Networks tab</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Network tab is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">7</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Clear all existing logs</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">8</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Now Click on Login button</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Login request is sent</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">9</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Validate the login request and wait for the response time</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Response time should be less than 1,0 s</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-25
+                            / Blank Factor / Performance
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Validate Response time is less than 1.0s when access to the login page</h1>
+        <div class="description"><p>Validate Response time is less than 1.0s when access to the login page</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>User is logged out</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open the browser</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Browser is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Press f12 to open developer mode in the browser</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>developer mode is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on Networks tab</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Network tab is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">4</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Clear all existing logs</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">5</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to www.testpage.com/login</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login page is displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">6</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Validate the login pages request and wait for the response time</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Response time should be less than 1,0 s</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-26
+                            / Blank Factor / Performance
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Validate that Logout Response time is less than 1.0s</h1>
+        <div class="description"><p>We need to validate the response time of a logout request</p></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-genderless color-normal"></i> Normal</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Positive</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>User is logged in</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Navigate to a <strong>functionality selection page</strong></p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p><strong>functionality selection page</strong> is displayed</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Press f12 to open developer mode in the browser</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>developer mode is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on Networks tab</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Network tab is open</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">4</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Clear all existing logs</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">5</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Click on Logout link</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">6</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Validate the logout request and wait for the response time</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Response time should be less than 1,0 s</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                                        <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-32
+                            / Blank Factor / Security
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify that the user only enters accepted special characters.</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-33
+                            / Blank Factor / Security
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify the login page is not shown when user press &quot;Back button&quot; after logged in</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-35
+                            / Blank Factor / Security
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Validate that functionality selection page does not page when a logged out user  access via url</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Negative</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>User should be logged out</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Get a <strong>functionality selection page link</strong></p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open a new browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Browser session created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>as a logged-out user, try to access to the <strong>functionality selection page</strong></p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>System should redirect to a login page</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-36
+                            / Blank Factor / Security
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Users should not be allowed to copy and paste Password from text box</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Negative</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                    <div class="data-row">
+                        <div class="conditions-header">Pre-conditions</div>
+                        <div class="conditions-data markdown"><p>Should be a logged out user and</p></div>
+                    </div>
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                            <div class="case-steps" style="padding-top: 1rem;">
+                    <h3 style="font-size:1rem; ">Steps to reproduce</h3>
+                                            <div class="case-steps-case mt-4">
+                            <div class="steps">
+                                <table class="table-steps" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <th width="10%">Step</th>
+                                        <th width="30%">Action</th>
+                                        <th width="30%">Input data</th>
+                                        <th width="30%">Expected result</th>
+                                    </tr>
+                                                                            <tr>
+                                            <td style="font-size: 0.875rem;">1</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Open a new browser session</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>browser ssion created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">2</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Access to www.testpage.com/login</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>login page created</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">3</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter username</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">4</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Enter Password</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">5</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Mark with the cursor the password entered</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Values selected</p></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">6</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>Ctrl c</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"></td>
+                                        </tr>
+                                                                                                                    <tr>
+                                            <td style="font-size: 0.875rem;">7</td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"><p>ctrl v in another text editor</p></td>
+                                            <td style="padding-right: 1rem; font-size: 0.875rem; word-break: break-all;"></td>
+                                            <td style="font-size: 0.875rem; word-break: break-all;"><p>Password should be copied</p></td>
+                                        </tr>
+                                                                                                            </table>
+                            </div>
+                        </div>
+                                    </div>
+                    </div>
+    </div>
+</div>
+                                                            <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-27
+                            / Blank Factor / Other not specified in requirement documents
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify the ‘Forgot Password’ functionality</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-28
+                            / Blank Factor / Other not specified in requirement documents
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify if login page allows to log in at the same time with different credentials in a different browser.</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-29
+                            / Blank Factor / Other not specified in requirement documents
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-30
+                            / Blank Factor / Other not specified in requirement documents
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify if the font, family, colores is according to the testPage standard</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-31
+                            / Blank Factor / Other not specified in requirement documents
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify if there is a ‘Cancel’ button available to erase the entered text.</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-34
+                            / Blank Factor / Other not specified in requirement documents
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify if the login page fits the mobile screen</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-37
+                            / Blank Factor / Other not specified in requirement documents
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Verify that after several failed logins attempts, the user should get locked</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-38
+                            / Blank Factor / Other not specified in requirement documents
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Validate SQL injection attacks</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+                    <div class="page">
+    <div>
+        <span style="font-size: 0.75rem; font-weight: 400; color: #686868">
+            DEMO-39
+                            / Blank Factor / Other not specified in requirement documents
+                    </span>
+        <h1 style="margin-bottom: 0.25rem;"> Validate SSL injecttiins attaks</h1>
+        <div class="description"></div>
+        <div class="row">
+                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Severity</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-normal"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Priority</h3>
+                    <span class="param"><i
+                                class="fas fa-minus color-medium"></i> Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Behavior</h3>
+                    <span class="param">Not set</span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Type</h3>
+                    <span class="param">Other</span>
+                </div>
+                                                <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Layer</h3>
+                        <span class="param">Unknown</span>
+                    </div>
+                                                    <div class="col-3">
+                        <h3 style="font-size: 0.875rem;">Is Flaky</h3>
+                        <span class="param">No</span>
+                    </div>
+                                            <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Milestone</h3>
+                    <span class="param">
+                                                    -
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Automation</h3>
+                    <span class="param">
+                                                    Not automated
+                                                </span>
+                </div>
+                                        <div class="col-3">
+                    <h3 style="font-size: 0.875rem;">Status</h3>
+                    <span class="param">
+                                                    Actual
+                                                </span>
+                </div>
+                            <div class="clearfix" style="padding-bottom: 0.75rem;"></div>
+                            <div class="clearfix"></div>
+                <div class="row" style="padding-top: 1rem;">
+                                                        </div>
+                        <div class="clearfix"></div>
+            <div style="padding-top: 1rem;">
+                                            </div>
+            <div class="clearfix"></div>
+                        <div class="clearfix"></div>
+                    </div>
+    </div>
+</div>
+            </body>
+</html>
